@@ -30,9 +30,9 @@ describe('test responses from user end point', () => {
     user = payload.user;
 
     expect(user.id).toEqual(jasmine.any(Number));
-    expect(user.username).toBe('mohelmy');
-    expect(user.firstname).toBe('mo');
-    expect(user.lastname).toBe('helmy');
+    expect(user.username).toEqual('mohelmy');
+    expect(user.firstname).toEqual('mo');
+    expect(user.lastname).toEqual('helmy');
     expect(user.password_digest).toEqual(jasmine.any(String));
   });
 
@@ -58,9 +58,9 @@ describe('test responses from user end point', () => {
     const authUser = payload.user;
 
     expect(authUser.id).toEqual(user.id);
-    expect(authUser.username).toBe(user.username);
-    expect(authUser.firstname).toBe(user.firstname);
-    expect(authUser.lastname).toBe(user.lastname);
+    expect(authUser.username).toEqual(user.username);
+    expect(authUser.firstname).toEqual(user.firstname);
+    expect(authUser.lastname).toEqual(user.lastname);
     expect(authUser.password_digest).toEqual(user.password_digest);
   });
 
@@ -74,9 +74,9 @@ describe('test responses from user end point', () => {
     expect(allUsers.length).toEqual(1);
 
     expect(allUsers[0].id).toEqual(user.id);
-    expect(allUsers[0].username).toBe(user.username);
-    expect(allUsers[0].firstname).toBe(user.firstname);
-    expect(allUsers[0].lastname).toBe(user.lastname);
+    expect(allUsers[0].username).toEqual(user.username);
+    expect(allUsers[0].firstname).toEqual(user.firstname);
+    expect(allUsers[0].lastname).toEqual(user.lastname);
     expect(allUsers[0].password_digest).toEqual(user.password_digest);
   });
 
@@ -88,9 +88,9 @@ describe('test responses from user end point', () => {
     const userResult = response.body;
 
     expect(userResult.id).toEqual(user.id);
-    expect(userResult.username).toBe(user.username);
-    expect(userResult.firstname).toBe(user.firstname);
-    expect(userResult.lastname).toBe(user.lastname);
+    expect(userResult.username).toEqual(user.username);
+    expect(userResult.firstname).toEqual(user.firstname);
+    expect(userResult.lastname).toEqual(user.lastname);
     expect(userResult.password_digest).toEqual(user.password_digest);
   });
 

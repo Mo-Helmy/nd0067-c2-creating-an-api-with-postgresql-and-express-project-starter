@@ -12,6 +12,9 @@
     },
     "password": {
       "ENV": "POSTGRES_PASSWORD"
+    },
+    "port": {
+      "ENV": "POSTGRES_PORT"
     }
   },
   "test": {
@@ -27,6 +30,10 @@
     },
     "password": {
       "ENV": "POSTGRES_PASSWORD"
+    },
+    "port": {
+      "ENV": "POSTGRES_PORT"
     }
-  }
+  },
+  "sql-file": true
 }
